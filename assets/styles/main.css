@@ -1,0 +1,29 @@
+*,
+body a {
+  text-decoration: none;
+}
+body {
+  background-color: #e6f0ff;
+}
+select,
+input,
+.form-control:focus {
+  border-color: #0f77ff;
+  box-shadow: none;
+}
+.form-select:focus {
+  border-color: #0f77ff;
+  box-shadow: none;
+}
+
+.card-menu .list-group-flush .list-group-item {
+  color: #000000;
+  background-color: #fdfdfd;
+  transition: 0.4s;
+}
+
+.card-menu .list-group-flush .list-group-item:hover {
+  background-color: #505050;
+  color: #fdfdfd;
+  font-weight: bold;
+}

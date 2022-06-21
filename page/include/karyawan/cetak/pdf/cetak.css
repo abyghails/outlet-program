@@ -1,0 +1,18 @@
+.title {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 50px 0;
+}
+.title h4 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 3px double #313131;
+}
+table th {
+  font-size: 16px;
+}
+table tbody td {
+  font-size: 14px;
+}
