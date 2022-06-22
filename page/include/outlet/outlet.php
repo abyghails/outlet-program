@@ -43,7 +43,6 @@ $role = $dataUser[0]["role"];
 										<td><?= $row["outlet"]; ?></td>
 										<td><?= $row["alamat"]; ?></td>
 									</tr>
-
 								<?php } ?>
 							</tbody>
 						</table>
