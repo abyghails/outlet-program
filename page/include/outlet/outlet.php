@@ -21,19 +21,30 @@ $role = $dataUser[0]["role"];
 							<button type="button" data-bs-toggle="modal" data-bs-target="#modalTambahOutlet" class="btn btn-sm btn-success">+Tambah Data</button>
 						<?php } ?>
 					</div>
-
 					<div class="table-responsive">
 						<table class="table table-sm" id="table-outlet">
 							<thead>
 								<tr>
-									<th>No</th>
+									<th>Id</th>
 									<th>comid</th>
 									<th>Nama Outlet</th>
 									<th>Alamat</th>
 								</tr>
 							</thead>
 							<tbody>
+								<?php
+								// $i = 1;
+								$dataKu = query("SELECT * FROM tb_outlet ORDER BY id ASC");
+								foreach ($dataKu as $row) {
+								?>
+									<tr>
+										<td><?= $row["id"]; ?></td>
+										<td><?= $row["comid"]; ?></td>
+										<td><?= $row["outlet"]; ?></td>
+										<td><?= $row["alamat"]; ?></td>
+									</tr>
 
+								<?php } ?>
 							</tbody>
 						</table>
 					</div>
@@ -51,7 +62,7 @@ $role = $dataUser[0]["role"];
 				<h5 class="modal-title" id="modalTambahOutletLabel">Tambah Provinsi</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
-			<form action="include/provinsi/proses/tambah-provinsi.php" method="post">
+			<form action="include/outlet/proses/proses-tambah.php" method="post">
 				<div class="modal-body">
 					<div class="mb-3">
 						<label for="comid" class="form-label">comid</label>
