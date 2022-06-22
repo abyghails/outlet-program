@@ -26,6 +26,7 @@ $role = $dataUser[0]["role"];
 							<thead>
 								<tr>
 									<th>Id</th>
+									<th>outid</th>
 									<th>comid</th>
 									<th>Nama Outlet</th>
 									<th>Alamat</th>
@@ -33,12 +34,13 @@ $role = $dataUser[0]["role"];
 							</thead>
 							<tbody>
 								<?php
-								// $i = 1;
+								$i = 1;
 								$dataKu = query("SELECT * FROM tb_outlet ORDER BY id ASC");
 								foreach ($dataKu as $row) {
 								?>
 									<tr>
-										<td><?= $row["id"]; ?></td>
+										<td><?= $i++; ?></td>
+										<td><?= $row["outid"]; ?></td>
 										<td><?= $row["comid"]; ?></td>
 										<td><?= $row["outlet"]; ?></td>
 										<td><?= $row["alamat"]; ?></td>

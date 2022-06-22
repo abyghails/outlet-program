@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2022 at 05:25 AM
+-- Generation Time: Jun 22, 2022 at 10:19 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -99,17 +99,21 @@ INSERT INTO `tb_distributor` (`id`, `kode_distributor`, `nama_distributor`, `kot
 
 CREATE TABLE `tb_outlet` (
   `id` int(11) NOT NULL,
+  `outid` int(11) NOT NULL,
   `comid` int(11) NOT NULL,
   `outlet` text NOT NULL,
-  `alamat` text NOT NULL
+  `alamat` text NOT NULL,
+  `insert_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_outlet`
 --
 
-INSERT INTO `tb_outlet` (`id`, `comid`, `outlet`, `alamat`) VALUES
-(4, 1, 'OUTLET JAYA BARU', 'Kota Tangerang Selatan banten');
+INSERT INTO `tb_outlet` (`id`, `outid`, `comid`, `outlet`, `alamat`, `insert_by`) VALUES
+(1, 1, 1, 'OUTLET JAYA BARU', 'Jl. Puspiptek Kota Tangerang Selatan', 1),
+(2, 1, 2, 'Teras Kota RS', 'Jalan BSD ', 1),
+(3, 2, 1, 'OUTLET Mekar Jaya', 'Lampung Mekar jaya purnama', 1);
 
 -- --------------------------------------------------------
 
@@ -189,6 +193,12 @@ ALTER TABLE `provinsi`
 --
 ALTER TABLE `tb_distributor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_outlet`
+--
+ALTER TABLE `tb_outlet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
